@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import Advertising from "./Advertising.vue";
-import Navbar from "./Navbar.vue";
-import Jumbotron from "./Jumbotron.vue";
+import Advertising from "./header/Advertising.vue";
+import Navbar from "./header/Navbar.vue";
+import Jumbotron from "./header/Jumbotron.vue";
 export default {
   name: "Header",
   components: {

@@ -2,11 +2,16 @@
   <div id="avada" class="jumbotron h-100">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
-        <div class="col">
+        <div class="col-6">
           <h1 class="text-white">Drive with Avada</h1>
           <p class="text-white">
             We offer the finest driving tuition money can buy
           </p>
+        </div>
+        <div class="col-6">
+          <div class="figure">
+            <img src="" alt="" />
+          </div>
         </div>
       </div>
     </div>
@@ -29,13 +34,13 @@ export default {
 }
 
 #avada {
-  background-image: url("../assets/img/homepage-hero-background.jpg");
+  background-image: url("../../assets/img/homepage-hero-background.jpg");
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 3.5rem;
 }
 p {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 </style>

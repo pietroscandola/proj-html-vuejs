@@ -5,7 +5,7 @@
         <div class="col-3">
           <figure>
             <img
-              src="../assets/img/avada-drivers-logo-2x-300x58.png"
+              src="../../assets/img/avada-drivers-logo-2x-300x58.png"
               alt="Logo avada"
             />
           </figure>
@@ -32,7 +32,7 @@
                 <a href="#">BLOG</a>
               </div>
               <div class="col-2 d-flex align-items-center justify-content-end">
-                <a href="#" id="booking">BOOK NOW</a>
+                <a href="#" id="booking"><button>BOOK NOW</button></a>
               </div>
             </div>
           </nav>
@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/style.scss";
+@import "../../assets/scss/style.scss";
 
 .bg-navbar {
   background-color: $bg_navbar;
@@ -75,9 +75,11 @@ a:hover {
   text-underline-position: under;
 }
 
-#booking {
-  padding: 15px 25px;
+button {
   background-color: $color_green;
+  color: white;
+  font-weight: 600;
   border-radius: 20px;
+  padding: 10px;
 }
 </style>

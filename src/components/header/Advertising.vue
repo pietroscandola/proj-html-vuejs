@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/style.scss";
+@import "../../assets/scss/style.scss";
 
 .bg_ads {
   background-color: $bg_ads;
