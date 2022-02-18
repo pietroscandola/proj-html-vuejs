@@ -3,6 +3,7 @@
     <Registration />
     <Phone />
     <Courses />
+    <Rate />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Registration from "./main/Registration.vue";
 import Phone from "./main/Phone.vue";
 import Courses from "./main/Courses.vue";
+import Rate from "./main/Rate.vue";
 
 export default {
   name: "Main",
@@ -17,6 +19,7 @@ export default {
     Registration,
     Phone,
     Courses,
+    Rate,
   },
 };
 </script>
