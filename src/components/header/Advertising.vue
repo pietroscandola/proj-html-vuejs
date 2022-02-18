@@ -24,6 +24,9 @@ export default {
 
 .bg_ads {
   background-color: $bg_ads;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 span {

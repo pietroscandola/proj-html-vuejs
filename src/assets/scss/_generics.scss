@@ -1,0 +1,28 @@
+@import "var";
+
+/* BUTTON */
+
+.button {
+    background-color: $color_green;
+    color: white;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 10px 16px;
+    text-decoration: none;
+    border: 3px solid transparent;
+}
+
+.button:hover {
+    color: $color_green;
+    background-color: white;
+    border: 3px solid $color_green;
+}
+
+.button-outline {
+    background-color: white;
+    color: $color_gray;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 10px;
+    border: 2px solid $color_gray;
+}

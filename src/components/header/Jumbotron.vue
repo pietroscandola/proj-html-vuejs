@@ -1,5 +1,5 @@
 <template>
-  <div id="avada" class="jumbotron h-100">
+  <div id="avada" class="jumbotron">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-6">
@@ -27,10 +27,11 @@ export default {
 <style scoped>
 .jumbotron {
   min-width: 100%;
-  min-height: 700px;
+  height: 700px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding-top: 146px;
 }
 
 #avada {

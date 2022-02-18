@@ -5,7 +5,7 @@
         <div class="col-3">
           <figure>
             <img
-              src="../../assets/img/avada-drivers-logo-2x-300x58.png"
+              src="../../assets/img/avada-drivers-logo-1x.png"
               alt="Logo avada"
             />
           </figure>
@@ -32,7 +32,7 @@
                 <a href="#">BLOG</a>
               </div>
               <div class="col-2 d-flex align-items-center justify-content-end">
-                <a href="#" id="booking"><button>BOOK NOW</button></a>
+                <a href="#" class="button">BOOK NOW</a>
               </div>
             </div>
           </nav>
@@ -53,33 +53,27 @@ export default {
 
 .bg-navbar {
   background-color: $bg_navbar;
-  opacity: 25%;
+  position: fixed;
+  width: 100%;
+  top: 34px;
+  z-index: 1;
 }
 
 a {
-  text-decoration: none;
   color: white;
   font-weight: 600;
+  padding-bottom: 5px;
+  text-decoration: none;
 }
 
 a:hover {
   color: $color_green;
-  text-decoration: underline;
-  text-decoration-color: $color_green;
-  text-underline-position: under;
+  border-bottom: 1px solid $color_green;
 }
 
 .active {
   color: $color_green;
-  text-decoration: underline;
-  text-underline-position: under;
-}
 
-button {
-  background-color: $color_green;
-  color: white;
-  font-weight: 600;
-  border-radius: 20px;
-  padding: 10px;
+  border-bottom: 1px solid $color_green;
 }
 </style>

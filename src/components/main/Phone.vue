@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: "Phonenumber",
+  name: "Phone",
 };
 </script>
 

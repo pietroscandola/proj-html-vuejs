@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="container">
-      <div class="row my-5">
+      <div class="row">
         <div class="col-6">
           <h2 id="title" class="pt-5">Get Behind the Wheel</h2>
           <p class="py-3 fs-5 text">
@@ -57,7 +57,7 @@
               />
             </div>
             <div class="text-center my-3">
-              <button class="w-50">REQUEST A CALLBACK</button>
+              <button class="w-50 button">REQUEST A CALLBACK</button>
             </div>
           </div>
         </div>
@@ -74,6 +74,9 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../assets/scss/style.scss";
+.row {
+  margin: 60px 0 150px 0;
+}
 
 #title {
   font-size: 3rem;
@@ -88,8 +91,10 @@ input {
   border-left: 0;
 }
 .card {
-  width: 70%;
+  width: 30%;
   border-radius: 30px;
+  position: absolute;
+  margin-top: -90px;
 }
 button {
   border-radius: 20px;

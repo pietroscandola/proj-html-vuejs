@@ -1,19 +1,22 @@
 <template>
   <div>
     <Registration />
-    <Phonenumber />
+    <Phone />
+    <Courses />
   </div>
 </template>
 
 <script>
 import Registration from "./main/Registration.vue";
-import Phonenumber from "./main/Phonenumber.vue";
+import Phone from "./main/Phone.vue";
+import Courses from "./main/Courses.vue";
 
 export default {
   name: "Main",
   components: {
     Registration,
-    Phonenumber,
+    Phone,
+    Courses,
   },
 };
 </script>
