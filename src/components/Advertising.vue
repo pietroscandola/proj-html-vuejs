@@ -1,12 +1,12 @@
 <template>
-  <div class="bg-ads">
+  <div class="bg_ads">
     <div class="container">
-      <div class="row">
-        <div class="col">
-          <p></p>
+      <div class="row py-2">
+        <div class="col d-flex align-items-center">
+          <span> We have a 95% Successful Pass Rate! </span>
         </div>
-        <div class="col">
-          <p></p>
+        <div class="col d-flex align-items-center justify-content-end">
+          <span>Give us a call to book your tuition! 1-800-555-555</span>
         </div>
       </div>
     </div>
@@ -19,4 +19,15 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@import "../assets/scss/style.scss";
+
+.bg_ads {
+  background-color: $bg_ads;
+}
+
+span {
+  font-size: 12px;
+  color: lightgray;
+}
+</style>
