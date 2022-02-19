@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <Main />
+    <Main :instructors="instructors" />
   </div>
 </template>
 
@@ -14,6 +14,24 @@ export default {
   components: {
     Header,
     Main,
+  },
+  data() {
+    return {
+      instructors: [
+        {
+          name: "Mike Hart",
+          image: "instructor-mikehart.jpg",
+        },
+        {
+          name: "John Smith",
+          image: "instructor-johnsmith.jpg",
+        },
+        {
+          name: "Angela Hart",
+          image: "instructor-angelahart.jpg",
+        },
+      ],
+    };
   },
 };
 </script>

@@ -89,7 +89,7 @@ p {
   width: 80px;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   font-weight: 400;
   color: white;
   position: absolute;

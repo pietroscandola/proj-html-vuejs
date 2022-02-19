@@ -1,87 +1,50 @@
 <template>
-  <div class="card">
-    <div class="flex-wrapper py-5">
-      <div class="single-chart">
-        <svg viewBox="0 0 36 36" class="circular-chart blue">
-          <path
-            class="circle-bg"
-            d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"
-          />
-          <path
-            class="circle"
-            stroke-dasharray="0, 100"
-            d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"
-          />
-          <text x="18" y="20.35" class="percentage">0%</text>
-        </svg>
+  <div class="cards">
+    <div
+      v-for="(instructor, index) in instructors"
+      :key="index"
+      class="card mx-5"
+    >
+      <img
+        :src="require(`../../assets/img/${instructor.image}`)"
+        :alt="instructor.name"
+      />
+      <h5 class="text-center">{{ instructor.name }}</h5>
+      <div class="text-center py-1">
+        <i class="fa-brands fa-facebook-f px-2"></i>
+        <i class="fa-brands fa-twitter px-2"></i>
+        <i class="fa-brands fa-instagram px-2"></i>
       </div>
+      <p class="text-center p-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
     </div>
-    <h5 class="text-center pb-5">ACCIDENT RATE</h5>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Card90",
+  name: "Card",
+  props: ["instructors"],
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../../assets/scss/style.scss";
+.cards {
+  display: flex;
+}
 
 .card {
   border-top: 10px solid $color_green;
   border-radius: 20px;
 }
 
-.flex-wrapper {
-  display: flex;
-  flex-flow: row nowrap;
+img {
+  padding: 20px;
 }
-
-.single-chart {
-  width: 100%;
-  justify-content: space-around;
-}
-
-.circular-chart {
-  display: block;
-  margin: 10px auto;
-  max-width: 80%;
-  max-height: 250px;
-}
-
-.circle-bg {
-  fill: none;
-  stroke: #eee;
-  stroke-width: 2.5;
-}
-
-.circle {
-  fill: none;
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  animation: progress 3s ease-out forwards;
-}
-
-@keyframes progress {
-  0% {
-    stroke-dasharray: 0 100;
-  }
-}
-
-.circular-chart.blue .circle {
-  stroke: $color_green;
-}
-
-.percentage {
-  fill: #666;
-  font-family: sans-serif;
-  font-size: 0.5em;
-  text-anchor: middle;
+p,
+i {
+  color: $color_gray;
 }
 </style>

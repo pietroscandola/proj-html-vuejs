@@ -26,7 +26,7 @@
 
 <script>
 export default {
-  name: "Card90",
+  name: "Card100",
 };
 </script>
 
