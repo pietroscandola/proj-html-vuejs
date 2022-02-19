@@ -11,16 +11,16 @@
           />
           <path
             class="circle"
-            stroke-dasharray="0, 100"
+            stroke-dasharray="90, 100"
             d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
           />
-          <text x="18" y="20.35" class="percentage">0%</text>
+          <text x="18" y="20.35" class="percentage">90%</text>
         </svg>
       </div>
     </div>
-    <h5 class="text-center pb-5">ACCIDENT RATE</h5>
+    <h5 class="text-center pb-5">PASS RATE</h5>
   </div>
 </template>
 
