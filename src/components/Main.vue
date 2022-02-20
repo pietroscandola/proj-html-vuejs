@@ -7,6 +7,7 @@
     <Instructors :instructors="instructors" />
     <Testimonials :testimonials="testimonials" />
     <News />
+    <Newsletter />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import Rate from "./main/Rate.vue";
 import Instructors from "./main/Instructors.vue";
 import Testimonials from "./main/Testimonials.vue";
 import News from "./main/News.vue";
+import Newsletter from "./main/Newsletter.vue";
 
 export default {
   name: "Main",
@@ -29,6 +31,7 @@ export default {
     Instructors,
     Testimonials,
     News,
+    Newsletter,
   },
   props: ["instructors", "testimonials"],
 };
