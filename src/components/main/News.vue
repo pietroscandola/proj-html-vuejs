@@ -32,9 +32,14 @@
           </div>
         </div>
         <div class="d-flex justify-content-center">
-          <button class="button">MORE FROM THE BLOG</button>
+          <button class="button my-5">MORE FROM THE BLOG</button>
         </div>
       </div>
+      <img
+        class="latestnews-bottom"
+        src="../../assets/img/latestnews-bottom.png"
+        alt="latestnews-bottom"
+      />
     </div>
   </section>
 </template>
@@ -50,7 +55,7 @@ export default {
 
 .bg-image {
   min-width: 100%;
-  height: 700px;
+  height: 900px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -66,7 +71,7 @@ h5 {
 
 .card {
   border-top: 5px solid $color_green;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   position: absolute;
   width: 70%;
   margin-top: -50px;
@@ -75,5 +80,10 @@ h5 {
 img {
   width: 70%;
   height: auto;
+}
+
+.latestnews-bottom {
+  position: absolute;
+  margin-top: 702px;
 }
 </style>

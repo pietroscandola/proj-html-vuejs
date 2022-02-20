@@ -2,18 +2,21 @@
   <div>
     <Header />
     <Main :instructors="instructors" :testimonials="testimonials" />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
 import Main from "./components/Main.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
   components: {
     Header,
     Main,
+    Footer,
   },
   data() {
     return {
@@ -40,22 +43,22 @@ export default {
         },
         {
           id: 1,
-          name: "Grant",
+          name: "Grant Harvey",
           image: "testimonial-grant.png",
         },
         {
           id: 2,
-          name: "Harold",
+          name: "Harold Green",
           image: "testimonial-harold.png",
         },
         {
           id: 3,
-          name: "Kate",
+          name: "Kate Lewis",
           image: "testimonial-kate.png",
         },
         {
           id: 4,
-          name: "Kelly",
+          name: "Kelly Johnson",
           image: "testimonial-kelly.png",
         },
       ],
