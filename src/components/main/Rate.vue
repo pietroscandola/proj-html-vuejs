@@ -11,7 +11,7 @@
 <script>
 import Card90 from "./Card_90.vue";
 import Card100 from "./Card_100.vue";
-import Card0 from "./Card_0%.vue";
+import Card0 from "./Card_0.vue";
 
 export default {
   name: "Rate",
@@ -23,4 +23,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.card {
+  margin-top: -100px;
+}
+</style>

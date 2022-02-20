@@ -70,7 +70,7 @@ export default {
 .bg-image {
   background-image: url("../../assets/img/promise-background.jpg");
   min-width: 100%;
-  min-height: 500px;
+  min-height: 600px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
