@@ -12,7 +12,7 @@
               alt="Blog Choose Car"
             />
             <h5 class="pt-4">What Car to start with</h5>
-            <p>Februar 7th,2019 | <span>0 Comments</span></p>
+            <p class="font-12">Februar 7th,2019 | <span>0 Comments</span></p>
             <p class="py-2">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             </p>
@@ -25,7 +25,7 @@
               alt="Blog Choose Car"
             />
             <h5 class="pt-4">Avada Driving School Expanding</h5>
-            <p class="fs-6">Februar 7th,2019 | <span>0 Comments</span></p>
+            <p class="font-12">Februar 7th,2019 | <span>0 Comments</span></p>
             <p class="py-2">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             </p>
@@ -68,6 +68,10 @@ h2 {
 
 h5 {
   color: $color_green;
+}
+
+.font-12 {
+  font-size: 12px;
 }
 
 .card {

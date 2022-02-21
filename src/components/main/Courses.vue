@@ -74,6 +74,7 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-radius: 0 0 25% 25%;
 }
 
 h2 {
