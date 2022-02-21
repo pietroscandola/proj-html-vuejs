@@ -3,7 +3,7 @@
     <Registration />
     <Phone />
     <Courses />
-    <Rate />
+    <Rate :rates="rates" />
     <Instructors :instructors="instructors" />
     <Testimonials :testimonials="testimonials" />
     <News />
@@ -33,7 +33,7 @@ export default {
     News,
     Newsletter,
   },
-  props: ["instructors", "testimonials"],
+  props: ["instructors", "testimonials", "rates"],
 };
 </script>
 

@@ -11,22 +11,25 @@
           />
           <path
             class="circle"
-            stroke-dasharray="100, 100"
+            :stroke-dasharray="`${rate.percentage}, 100`"
             d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
           />
-          <text x="18" y="20.35" class="percentage">100%</text>
+          <text x="18" y="20.35" class="percentage">
+            {{ rate.percentage }}%
+          </text>
         </svg>
       </div>
     </div>
-    <h5 class="text-center pb-5">REFERRAL RATE</h5>
+    <h5 class="text-center pb-5">{{ rate.name }}</h5>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Card100",
+  name: "CardRate",
+  props: ["rate"],
 };
 </script>
 
@@ -36,6 +39,10 @@ export default {
 .card {
   border-top: 10px solid $color_green;
   border-radius: 20px;
+  width: 100%;
+}
+h5 {
+  color: $color_gray;
 }
 
 .flex-wrapper {

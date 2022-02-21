@@ -1,7 +1,11 @@
 <template>
   <div>
     <Header :navbaritems="navbaritems" />
-    <Main :instructors="instructors" :testimonials="testimonials" />
+    <Main
+      :instructors="instructors"
+      :testimonials="testimonials"
+      :rates="rates"
+    />
     <Footer :contacts="contacts" :courses="courses" />
   </div>
 </template>
@@ -21,6 +25,20 @@ export default {
   data() {
     return {
       navbaritems: ["HOME", "ABOUT", "PRICES", "COURSES", "LOCATION", "BLOG"],
+      rates: [
+        {
+          percentage: 90,
+          name: "PASS RATE",
+        },
+        {
+          percentage: 100,
+          name: "REFERRAL RATE",
+        },
+        {
+          percentage: 0,
+          name: "ACCIDENT RATE",
+        },
+      ],
       instructors: [
         {
           name: "Mike Hart",
