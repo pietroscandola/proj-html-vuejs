@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Header :navbaritems="navbaritems" />
     <Main :instructors="instructors" :testimonials="testimonials" />
     <Footer />
   </div>
@@ -20,6 +20,7 @@ export default {
   },
   data() {
     return {
+      navbaritems: ["HOME", "ABOUT", "PRICES", "COURSES", "LOCATION", "BLOG"],
       instructors: [
         {
           name: "Mike Hart",

@@ -11,30 +11,18 @@
           </figure>
         </div>
         <div class="col-9">
-          <nav class="py-2">
-            <div class="row align-items-center justify-content-between">
-              <div class="col-1 d-flex align-items-center justify-content-end">
-                <a href="#" class="active">HOME</a>
-              </div>
-              <div class="col-1 d-flex align-items-center justify-content-end">
-                <a href="#">ABOUT</a>
-              </div>
-              <div class="col-1 d-flex align-items-center justify-content-end">
-                <a href="#">PRICES</a>
-              </div>
-              <div class="col-1 d-flex align-items-center justify-content-end">
-                <a href="#">COURSES</a>
-              </div>
-              <div class="col-1 d-flex align-items-center justify-content-end">
-                <a href="#">LOCATION</a>
-              </div>
-              <div class="col-1 d-flex align-items-center justify-content-end">
-                <a href="#">BLOG</a>
-              </div>
-              <div class="col-2 d-flex align-items-center justify-content-end">
-                <a href="#" class="button">BOOK NOW</a>
-              </div>
-            </div>
+          <nav class="pt-3">
+            <ul class="d-flex justify-content-around align-items-center">
+              <li
+                v-for="(navbaritem, index) in navbaritems"
+                :key="index"
+                :class="{ active: isActive(index) }"
+                @click="setIndex(index)"
+              >
+                <a href="#">{{ navbaritem }}</a>
+              </li>
+              <li><a href="#" class="button">BOOK NOW</a></li>
+            </ul>
           </nav>
         </div>
       </div>
@@ -45,6 +33,20 @@
 <script>
 export default {
   name: "Navbar",
+  props: ["navbaritems"],
+  data() {
+    return {
+      currentIndex: 0,
+    };
+  },
+  methods: {
+    isActive(index) {
+      return index === this.currentIndex;
+    },
+    setIndex(index) {
+      this.currentIndex = index;
+    },
+  },
 };
 </script>
 
@@ -73,7 +75,10 @@ a:hover {
 
 .active {
   color: $color_green;
-
   border-bottom: 1px solid $color_green;
+}
+
+li {
+  list-style-type: none;
 }
 </style>

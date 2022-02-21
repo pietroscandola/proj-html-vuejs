@@ -1,7 +1,7 @@
 <template>
   <header>
     <Advertising />
-    <Navbar />
+    <Navbar :navbaritems="navbaritems" />
     <Jumbotron />
   </header>
 </template>
@@ -17,6 +17,7 @@ export default {
     Navbar,
     Jumbotron,
   },
+  props: ["navbaritems"],
 };
 </script>
 

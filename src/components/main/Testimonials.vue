@@ -78,7 +78,7 @@ export default {
 <style lang="scss" scoped>
 .bg-image {
   min-width: 100%;
-  height: 900px;
+  height: 800px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
