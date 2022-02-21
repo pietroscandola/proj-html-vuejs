@@ -5,6 +5,7 @@
       :instructors="instructors"
       :testimonials="testimonials"
       :rates="rates"
+      :news="news"
     />
     <Footer :contacts="contacts" :courses="courses" />
   </div>
@@ -79,6 +80,17 @@ export default {
           id: 4,
           name: "Kelly Johnson",
           image: "testimonial-kelly.png",
+        },
+      ],
+
+      news: [
+        {
+          title: "What Car to start with",
+          image: "blog-choosecar-700x441.jpg",
+        },
+        {
+          title: "Avada Driving School Expanding",
+          image: "blogpost-10and2-700x441.jpg",
         },
       ],
 

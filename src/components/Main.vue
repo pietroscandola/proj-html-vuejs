@@ -6,7 +6,7 @@
     <Rate :rates="rates" />
     <Instructors :instructors="instructors" />
     <Testimonials :testimonials="testimonials" />
-    <News />
+    <News :news="news" />
     <Newsletter />
   </div>
 </template>
@@ -33,7 +33,7 @@ export default {
     News,
     Newsletter,
   },
-  props: ["instructors", "testimonials", "rates"],
+  props: ["instructors", "testimonials", "rates", "news"],
 };
 </script>
 

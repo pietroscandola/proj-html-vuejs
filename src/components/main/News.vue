@@ -1,46 +1,39 @@
 <template>
   <section class="bg-image">
     <div class="container">
-      <div class="card">
-        <h2 class="text-center py-5">Latest News</h2>
-        <div class="row">
-          <div
-            class="col-6 d-flex flex-column justify-content-center align-items-center"
-          >
-            <img
-              src="../../assets/img/blog-choosecar-700x441.jpg"
-              alt="Blog Choose Car"
-            />
-            <h5 class="pt-4">What Car to start with</h5>
-            <p class="font-12">Februar 7th,2019 | <span>0 Comments</span></p>
-            <p class="py-2">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            </p>
+      <div class="card-news">
+        <div class="card">
+          <h2 class="text-center py-5">Latest News</h2>
+          <div class="row d-flex">
+            <div
+              v-for="(news, index) in news"
+              :key="index"
+              class="col-6 d-flex flex-column justify-content-center align-items-center"
+            >
+              <img
+                :src="require(`../../assets/img/${news.image}`)"
+                alt="Blog Choose Car"
+              />
+              <h5 class="pt-4">{{ news.title }}</h5>
+              <p class="font-12">Februar 7th,2019 | <span>0 Comments</span></p>
+              <p class="py-2">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
+            </div>
           </div>
-          <div
-            class="col-6 d-flex flex-column justify-content-center align-items-center"
-          >
-            <img
-              src="../../assets/img/blogpost-10and2-700x441.jpg"
-              alt="Blog Choose Car"
-            />
-            <h5 class="pt-4">Avada Driving School Expanding</h5>
-            <p class="font-12">Februar 7th,2019 | <span>0 Comments</span></p>
-            <p class="py-2">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            </p>
+          <div class="d-flex justify-content-center">
+            <button class="button my-5">MORE FROM THE BLOG</button>
           </div>
         </div>
-        <div class="d-flex justify-content-center">
-          <button class="button my-5">MORE FROM THE BLOG</button>
+        <div>
+          <img
+            class="latestnews-bottom"
+            src="../../assets/img/latestnews-bottom.png"
+            alt="latestnews-bottom"
+            id="latestnews-bottom"
+          />
         </div>
       </div>
-      <img
-        class="latestnews-bottom"
-        src="../../assets/img/latestnews-bottom.png"
-        alt="latestnews-bottom"
-        id="latestnews-bottom"
-      />
     </div>
   </section>
 </template>
@@ -48,6 +41,7 @@
 <script>
 export default {
   name: "News",
+  props: ["news"],
 };
 </script>
 
@@ -74,10 +68,14 @@ h5 {
   font-size: 12px;
 }
 
+.card-news {
+  position: relative;
+  top: -50px;
+}
+
 .card {
   border-top: 5px solid $color_green;
   border-radius: 20px 20px 0 0;
-  margin-top: -50px;
   border-bottom: 2px solid white;
 }
 
@@ -88,7 +86,6 @@ img {
 
 #latestnews-bottom {
   width: 100%;
-  top: -1px;
 }
 span {
   color: $color_green;
