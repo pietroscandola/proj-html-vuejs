@@ -12,7 +12,7 @@
               alt="Blog Choose Car"
             />
             <h5 class="pt-4">What Car to start with</h5>
-            <p>Februar 7th,2019 | 0 Comments</p>
+            <p>Februar 7th,2019 | <span>0 Comments</span></p>
             <p class="py-2">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             </p>
@@ -25,7 +25,7 @@
               alt="Blog Choose Car"
             />
             <h5 class="pt-4">Avada Driving School Expanding</h5>
-            <p>Februar 7th,2019 | 0 Comments</p>
+            <p class="fs-6">Februar 7th,2019 | <span>0 Comments</span></p>
             <p class="py-2">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             </p>
@@ -39,6 +39,7 @@
         class="latestnews-bottom"
         src="../../assets/img/latestnews-bottom.png"
         alt="latestnews-bottom"
+        id="latestnews-bottom"
       />
     </div>
   </section>
@@ -72,9 +73,8 @@ h5 {
 .card {
   border-top: 5px solid $color_green;
   border-radius: 20px 20px 0 0;
-  position: absolute;
-  width: 70%;
   margin-top: -50px;
+  border-bottom: 2px solid white;
 }
 
 img {
@@ -82,8 +82,11 @@ img {
   height: auto;
 }
 
-.latestnews-bottom {
-  position: absolute;
-  margin-top: 702px;
+#latestnews-bottom {
+  width: 100%;
+  top: -1px;
+}
+span {
+  color: $color_green;
 }
 </style>

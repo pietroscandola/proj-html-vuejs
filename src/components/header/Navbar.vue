@@ -16,10 +16,11 @@
               <li
                 v-for="(navbaritem, index) in navbaritems"
                 :key="index"
-                :class="{ active: isActive(index) }"
                 @click="setIndex(index)"
               >
-                <a href="#">{{ navbaritem }}</a>
+                <a href="#" :class="{ active: isActive(index) }">{{
+                  navbaritem
+                }}</a>
               </li>
               <li><a href="#" class="button">BOOK NOW</a></li>
             </ul>
@@ -71,7 +72,6 @@ a {
 a:hover {
   color: $color_green;
 }
-
 .active {
   color: $color_green;
   border-bottom: 3px solid $color_green;

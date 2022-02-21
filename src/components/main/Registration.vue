@@ -30,6 +30,7 @@
                 type="text"
                 class="form-control py-2"
                 placeholder="Your Name*"
+                v-model="name"
               />
               <span class="input-group-text"
                 ><img src="../../assets/img/image.png" alt="image"
@@ -40,13 +41,17 @@
                 type="text"
                 class="form-control py-2"
                 placeholder="Email*"
+                required
+                v-model="email"
               />
             </div>
             <div class="input-group my-3">
               <input
-                type="text"
+                type="tel"
                 class="form-control py-2"
                 placeholder="Telephone"
+                v-model="phone"
+                @input="acceptNumber"
               />
             </div>
             <div class="input-group my-3">
@@ -54,10 +59,13 @@
                 type="text"
                 class="form-control py-2"
                 placeholder="Location"
+                v-model="location"
               />
             </div>
             <div class="text-center my-3">
-              <button class="w-50 button">REQUEST A CALLBACK</button>
+              <button class="w-50 button" @click="requestCall">
+                REQUEST A CALLBACK
+              </button>
             </div>
           </div>
         </div>
@@ -69,6 +77,43 @@
 <script>
 export default {
   name: "Registration",
+  data() {
+    return {
+      name: "",
+      email: "",
+      phone: "",
+      location: "",
+    };
+  },
+  watch: {
+    email(value) {
+      this.email = value;
+      this.validateEmail(value);
+    },
+  },
+  methods: {
+    acceptNumber() {
+      const n = this.phone
+        .replace(/\D/g, "")
+        .match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+      this.phone = !n[2] ? n[1] : "" + n[1] + " " + n[2] + (n[3] ? +n[3] : "");
+    },
+
+    validateEmail(value) {
+      if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+        this.msg["email"] = "";
+      } else {
+        this.msg["email"] = "Please enter a valid email address";
+      }
+    },
+
+    requestCall() {
+      this.name = "";
+      this.email = "";
+      this.phone = "";
+      this.location = "";
+    },
+  },
 };
 </script>
 
@@ -102,5 +147,9 @@ button {
   color: white;
   font-weight: 400;
   background-color: $color_green;
+}
+
+#lesson {
+  color: $color_green;
 }
 </style>
