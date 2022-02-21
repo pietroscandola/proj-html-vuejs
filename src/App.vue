@@ -2,7 +2,7 @@
   <div>
     <Header :navbaritems="navbaritems" />
     <Main :instructors="instructors" :testimonials="testimonials" />
-    <Footer />
+    <Footer :contacts="contacts" :courses="courses" />
   </div>
 </template>
 
@@ -61,6 +61,44 @@ export default {
           id: 4,
           name: "Kelly Johnson",
           image: "testimonial-kelly.png",
+        },
+      ],
+
+      contacts: [
+        {
+          icon: "fa-solid fa-house-chimney",
+          info: "12345 North Main Street, New York, NY 555555",
+        },
+        {
+          icon: "fa-solid fa-phone-flip",
+          info: "1.800.555.6789",
+        },
+        {
+          icon: "fa-solid fa-envelope",
+          info: "info@your-domain.com",
+        },
+        {
+          icon: "fa-solid fa-link",
+          info: "Theme-Fusion",
+        },
+      ],
+
+      courses: [
+        {
+          icon: "fa-solid fa-circle-arrow-right",
+          info: "Pass Plus",
+        },
+        {
+          icon: "fa-solid fa-circle-arrow-right",
+          info: "Intensive Course",
+        },
+        {
+          icon: "fa-solid fa-circle-arrow-right",
+          info: "Automatic",
+        },
+        {
+          icon: "fa-solid fa-circle-arrow-right",
+          info: "Instructor Training",
         },
       ],
     };

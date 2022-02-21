@@ -1,6 +1,6 @@
 <template>
   <div>
-    <MainFooter />
+    <MainFooter :contacts="contacts" :courses="courses" />
     <BottomFooter />
   </div>
 </template>
@@ -14,6 +14,7 @@ export default {
     MainFooter,
     BottomFooter,
   },
+  props: ["contacts", "courses"],
 };
 </script>
 

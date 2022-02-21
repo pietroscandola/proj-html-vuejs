@@ -70,12 +70,11 @@ a {
 
 a:hover {
   color: $color_green;
-  border-bottom: 1px solid $color_green;
 }
 
 .active {
   color: $color_green;
-  border-bottom: 1px solid $color_green;
+  border-bottom: 3px solid $color_green;
 }
 
 li {

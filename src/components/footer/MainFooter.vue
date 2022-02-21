@@ -17,42 +17,18 @@
         <div class="col-3">
           <h4 class="py-3">CONTACT DETAILS</h4>
           <ul class="contacts">
-            <li class="py-2">
-              <i class="fa-solid fa-house-chimney pe-3"></i>
-              <span>12345 North Main Street, New York, NY 555555</span>
-            </li>
-            <li class="py-2">
-              <i class="fa-solid fa-phone-flip pe-3"></i>
-              <span>1.800.555.6789</span>
-            </li>
-            <li class="py-2">
-              <i class="fa-solid fa-envelope pe-3"></i>
-              <span>info@your-domain.com</span>
-            </li>
-            <li class="py-2">
-              <i class="fa-solid fa-link pe-3"></i>
-              <span>Theme-Fusion</span>
+            <li v-for="(contact, index) in contacts" :key="index" class="py-2">
+              <i class="pe-3" :class="contact.icon"></i>
+              <span>{{ contact.info }}}</span>
             </li>
           </ul>
         </div>
         <div class="col-3">
-          <h4 class="py-3">CONTACT DETAILS</h4>
+          <h4 class="py-3">COURSES</h4>
           <ul>
-            <li class="py-2">
-              <i class="fa-solid fa-circle-arrow-right pe-3"></i
-              ><span class="contact-details">Pass Plus</span>
-            </li>
-            <li class="py-2">
-              <i class="fa-solid fa-circle-arrow-right pe-3"></i
-              ><span class="contact-details">Intensive Course</span>
-            </li>
-            <li class="py-2">
-              <i class="fa-solid fa-circle-arrow-right pe-3"></i
-              ><span class="contact-details">Automatic</span>
-            </li>
-            <li class="py-2">
-              <i class="fa-solid fa-circle-arrow-right pe-3"></i
-              ><span class="contact-details">Instructor Training</span>
+            <li v-for="(course, index) in courses" :key="index" class="py-2">
+              <i class="pe-3" :class="course.icon"></i
+              ><span class="contact-details">{{ course.info }}</span>
             </li>
           </ul>
         </div>
@@ -76,6 +52,7 @@
 <script>
 export default {
   name: "MainFooter",
+  props: ["contacts", "courses"],
 };
 </script>
 
