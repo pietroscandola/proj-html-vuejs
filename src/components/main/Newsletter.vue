@@ -2,12 +2,19 @@
   <section class="bg-image">
     <div class="container">
       <h2 class="text-center">Sign up to our Newsletter</h2>
+
       <div class="input py-2">
-        <input type="text" name="newsletter" />
+        <input type="text" name="newsletter" v-model="email" />
+        <div v-if="succesMail" class="alert text-center" role="alert">
+          Email inviata correttamente
+        </div>
       </div>
       <div class="py-3">
-        <button class="button text-center w-100">SUBSCRIVE</button>
+        <button class="button text-center w-100" @click="checkMail">
+          SUBSCRIVE
+        </button>
       </div>
+
       <p class="text-center">
         (We do not share your data with anybody, and only use it for its
         intended purpose)
@@ -19,6 +26,19 @@
 <script>
 export default {
   name: "Newsletter",
+  data() {
+    return {
+      email: "",
+      succesMail: false,
+    };
+  },
+  methods: {
+    checkMail() {
+      if (!this.email) return;
+      this.succesMail = true;
+      this.email = "";
+    },
+  },
 };
 </script>
 
@@ -48,5 +68,13 @@ p {
 input {
   width: 100%;
   padding: 10px;
+}
+.input {
+  position: relative;
+}
+
+.alert {
+  position: absolute;
+  top: 4px;
 }
 </style>

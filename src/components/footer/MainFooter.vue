@@ -19,7 +19,7 @@
           <ul class="contacts">
             <li v-for="(contact, index) in contacts" :key="index" class="py-2">
               <i class="pe-3" :class="contact.icon"></i>
-              <span>{{ contact.info }}}</span>
+              <span>{{ contact.info }}</span>
             </li>
           </ul>
         </div>
