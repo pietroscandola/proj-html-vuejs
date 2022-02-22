@@ -66,6 +66,9 @@
               <button class="w-50 button" @click="requestCall">
                 REQUEST A CALLBACK
               </button>
+              <div v-if="succesMail" class="alert text-center" role="alert">
+                Email inviata correttamente
+              </div>
             </div>
           </div>
         </div>
@@ -83,6 +86,7 @@ export default {
       email: "",
       phone: "",
       location: "",
+      succesMail: false,
     };
   },
   watch: {
@@ -108,6 +112,8 @@ export default {
     },
 
     requestCall() {
+      if (!this.email) return;
+      this.succesMail = true;
       this.name = "";
       this.email = "";
       this.phone = "";
